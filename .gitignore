@@ -1,5 +1,4 @@
 # nya
-build/
 target/
 Cargo.lock
 *.bin*
