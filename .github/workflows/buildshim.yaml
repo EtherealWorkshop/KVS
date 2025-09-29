@@ -8,6 +8,9 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -79,5 +82,6 @@ jobs:
         name: KVS ${{ inputs.tag }}
         tag_name: ${{ inputs.tag }}
         files: ./${{ matrix.board }}.bin
+        overwrite_files: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
